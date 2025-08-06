@@ -1,0 +1,125 @@
+﻿.new {
+    width: 100%;
+    background-color: #e69cd670;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    border: solid black 2px;
+    border-radius: 100px;
+    margin: 15px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.3);
+}
+.task-info {
+    display: flex;
+    margin-right: 15px;
+}
+
+.task-container-detailsProject {
+    background-color: #6b8db86d;
+    padding: 10px;
+    border-radius: 10px;
+    height: 500px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    justify-items: center;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    max-height: 500px;
+}
+.divHeader {
+    width: 100%;
+    background-color: #e69cd670;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid black 2px;
+    border-radius: 100px;
+    margin: 10px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.3);
+}
+.new:hover {
+    background-color: #6b8db86d;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+p {
+    text-align: center;
+}
+.header {
+    font-weight: bold;
+    margin: 0 4px;
+    width: 153px;
+}
+table {
+    border: 5px solid black;
+    width: 100%;
+    border-collapse: collapse;
+}
+button:hover {
+    transform: scale(1.25);
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.topBar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.txtTopBar {
+    /*justify-items: left;*/
+    padding:15px;
+}
+.imgTopBar {
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.btnUploadFile {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+.taskPHeader {
+    flex: 1;
+}
+.taskPRow {
+    flex: 1;
+}
+
+.pRow {
+    margin: 0 4px;
+    text-align: center;
+    justify-content: space-between;
+    
+   width: 150px;
+}
+.txtStartTime {
+    font-weight: bold;
+    color: green;
+}
+.txtEndTime {
+    font-weight: bold;
+    color: red;
+}
+.txtBox {
+    width: 175px;
+}
+.btnFile {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}

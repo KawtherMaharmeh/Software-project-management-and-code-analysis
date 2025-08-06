@@ -1,0 +1,78 @@
+﻿@model ProjectTasksViewModel
+
+@{
+    ViewData["Title"] = "Follow Project Progress";
+}
+
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+    <link rel="stylesheet" href="~/css/TeamLeader/FollowProjectProgressStyle.css">
+</head>
+<body>
+    <div class="container wow fadeInUp" data-wow-delay="0.3s">
+        <div class="topBar">
+            <div>
+                <img class="imgTopBar" src="@ViewBag.LogoUrl" width="100px" alt="Project Logo">
+            </div>
+            <div class="txtTopBar" style="width:100%">
+                <h2>@ViewBag.ProjectName</h2>
+                <h2><span data-translate="teamleader"></span> @ViewBag.TeamLeaders</h2>
+            </div>
+
+            <div class="uploadFile">
+                <a href="@Url.Action("DownloadAllFiles", "TeamLeader", new { projectId = Model.Project.Id })">
+                    <button class="btnUploadFile">
+                        <img src="~/lib/images/file.png" width="100px" alt="">
+                        <p class="txtUploadFile" data-translate="upload">Uploaded files</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="boxContainer">
+            <div class="task-container-detailsProject" style="overflow-x: auto; width: 100%;">
+
+
+                <table style="min-width: 600px; border-collapse: collapse;">
+                    <tbody>
+                        <tr>
+                            <div class="task-info align-items-center">
+                                <div class="divHeader">
+                                    <p class="header" data-translate="note">Note</p>
+                                    <p class="header" data-translate="studentname">Student Name</p>
+                                    <p class="header" data-translate="task9">Task Status</p>
+                                    <p class="header" data-translate="time">End Time</p>
+                                    <p class="header" data-translate="start">Start Time</p>
+                                    <p class="header taskPHeader" data-translate="task10">Task</p>
+                                </div>
+
+                            </div>
+
+                        </tr>
+                        @foreach (var task in Model.Tasks)
+                        {
+                            <tr>
+                                <div class="task-info">
+                                    <div class="new">
+                                        <input type="text" value="@task.Note" class="txtBox" readonly>
+                                        <p class="pRow ">@task.Student.Name</p>
+                                        <p class="pRow ">@task.TaskStatus</p>
+                                        <p class="pRow txtEndTime">@task.EndTime.ToString("yyyy-MM-dd")</p>
+                                        <p class="pRow txtStartTime">@task.StartTime.ToString("yyyy-MM-dd")</p>
+                                        <p class="pRow taskPRow">@task.SubTask.Name</p>
+                                    </div>
+
+                                </div>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+﻿.new {
+    width: 100%;
+    background-color: #F6B784;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid black 2px;
+    border-radius: 100px;
+    margin: 20px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.divHeader {
+    width: 100%;
+    background-color: #f5bc8e;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid black 2px;
+    border-radius: 100px;
+    margin: 20px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.new:hover {
+    background-color: #f9c499;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+    flex: 1;
+}
+
+.header {
+    font-weight: bold;
+    margin: 0 15px;
+}
+.headerTask {
+    flex: 2;
+}
+
+table {
+    border: 5px solid black;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+button:hover {
+    transform: scale(1.25);
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-row {
+    position: sticky;
+    top: 0;
+    background-color: #F6B784; 
+    z-index: 10;
+    width: 100%;
+    background-color: #F6B784;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid black 2px;
+    border-radius: 100px;
+    margin: 20px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.3);
+}
+.topBar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.topBarText {
+    justify-items: left;
+}
+.topBarImage {
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.uploadFile {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+.uploadFileBtn {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+.uploadFileTxt {
+    position: fixed;
+    top: 100px;
+}
+.boxContainer {
+    position: fixed;
+    top: 150px;
+    left: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pTable {
+    margin: 0 15px;
+}
+.txtStartTime {
+    font-Weight: bold;
+    color: green
+}
+.txtEndTime {
+    font-Weight: bold;
+    color: red
+}
+
+.bottomBar {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+.bottomBarBtn {
+    background-color: #ffffff00;
+    border: #ffffff00 solid 2px;
+    cursor: pointer;
+}

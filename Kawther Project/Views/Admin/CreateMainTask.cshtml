@@ -1,0 +1,15 @@
+﻿@model Kawther_Project.Models.MainTask
+<div class="container wow fadeInUp" data-wow-delay="0.3s">
+    <h2 data-translate="task" >Add Task </h2>
+
+    <form asp-action="CreateMainTask" method="post">
+        <div class="form-group">
+            <label asp-for="Name" data-translate="name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary" data-translate="save">Save</button>
+        <a asp-action="Index" class="btn btn-secondary" data-translate="back">Back</a>
+    </form>
+</div>

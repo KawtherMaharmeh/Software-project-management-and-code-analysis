@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="wrapper_login wow fadeInUp" data-wow-delay="0.3s">
+    <div class="container_login">
+        <h2 style="text-align: center; margin-bottom: 50px; font-size:40px; font-weight:bold;" data-translate="login">Login</h2>
+        <form method="post">
+            <div class="form-group_login">
+                <label for="email" data-translate="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email" />
+            </div>
+            <div class="form-group_login">
+                <label for="password" data-translate="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" />
+            </div>
+            @if (ViewBag.Error != null)
+            {
+                <div style="color: red;">@ViewBag.Error</div>
+            }
+            <br>
+            <button type="submit" class="btn_login" data-translate="login1">Log In</button>
+
+
+        </form>
+    </div>
+</div>
+<!-- Firebase core & auth -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script>
+    // إعداد معلومات مشروع Firebase الخاص بك
+    const firebaseConfig = {
+        apiKey: "AIzaSyAYGMo__0U_yg8Alwk4C0prFehMA1v3k4g",
+        authDomain: "project-flow-216e0.firebaseapp.com",
+        projectId: "project-flow-216e0",
+        storageBucket: "project-flow-216e0.firebasestorage.app",
+        messagingSenderId: "768779291139",
+        appId: "1:768779291139:web:9f726f242bb1ab8fcb5c36",
+        measurementId: "G-X6BEB28LRG"
+    };
+
+    // تهيئة Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // منع الإرسال التقليدي
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+
+                if (!user.emailVerified) {
+                    alert("يرجى التحقق من بريدك الإلكتروني قبل تسجيل الدخول.");
+                    firebase.auth().signOut(); // تسجيل خروج المستخدم من Firebase
+                    return;
+                }
+
+                // إذا تحقق، نرسل البريد إلى الخادم عبر fetch
+                fetch('/Account/LoginFromFirebase', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email })
+                })
+                    .then(response => {
+                        if (response.redirected) {
+                            window.location.href = response.url;
+                        } else {
+                            alert("حدث خطأ أثناء تسجيل الدخول إلى السيرفر.");
+                        }
+                    });
+            })
+            .catch((error) => {
+                alert("خطأ في تسجيل الدخول: " + error.message);
+            });
+    });
+</script>

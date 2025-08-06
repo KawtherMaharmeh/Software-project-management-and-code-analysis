@@ -1,0 +1,69 @@
+﻿@model List<Kawther_Project.Models.User>
+@{
+    ViewData["Title"] = "قائمة المستخدمين";
+    var searchName = ViewBag.SearchName as string ?? "";
+    var selectedType = ViewBag.SelectedType as string ?? "All";
+}
+
+<h2 data-translate="userList" class="wow fadeInUp" data-wow-delay="0.3s">قائمة المستخدمين</h2>
+
+<form method="get" action="/Admin/IndexUser" class="wow fadeInUp" data-wow-delay="0.3s">
+    <div class="form-group row container">
+        <div class="col-md-4">
+            <input type="text" name="searchName" class="form-control" placeholder="ابحث بالاسم..." value="@searchName" />
+        </div>
+        <div class="col-md-4">
+            <select name="userType" class="form-control">
+                <option value="All" selected="@(selectedType == "All")" data-translate="all">كل الأنواع</option>
+                <option value="Student" selected="@(selectedType == "Student")" data-translate="student">طالب</option>
+                <option value="Supervisor" selected="@(selectedType == "Supervisor")" data-translate="supervisor">مشرف</option>
+                <option value="Admin" selected="@(selectedType == "Admin")" data-translate="admin">مدير</option>
+                <option value="TeamLeader" selected="@(selectedType == "TeamLader")" data-translate="teamleader">المشرف</option>
+            </select>
+
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary" data-translate="search">بحث</button>
+            <a asp-action="CreateUser" class="btn btn-success" data-translate="user2">Add Sub Task</a>
+
+        </div>
+       
+
+    </div>
+</form>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th data-translate="email">البريد الإلكتروني</th>
+            <th data-translate="user">اسم المستخدم</th>
+            <th data-translate="phone">رقم الهاتف</th>
+            <th data-translate="user1">نوع المستخدم</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Any())
+        {
+            int i = 1;
+            foreach (var user in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@user.Email</td>
+                    <td>@user.UserName</td>
+                    <td>@user.PhoneNumber</td>
+                    <td>@user.UserType</td>
+                </tr>
+                i++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5" class="text-center" data-translate="There_are_no_users">لا يوجد مستخدمين بالمعايير المحددة</td>
+            </tr>
+        }
+    </tbody>
+</table>

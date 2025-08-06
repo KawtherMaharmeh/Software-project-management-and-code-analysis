@@ -1,0 +1,407 @@
+html {
+    font-size: 14px;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-color: #CF8CB0;
+    margin-bottom: 0;
+}
+.chat-container {
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(to bottom, #a5749b01, #5e3c6201);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+.chat-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    overflow-y: auto;
+    text-align: left;
+}
+/*===============================================*/
+/*============== DARK MODE STYLE ================*/
+/*===============================================*/
+.dark-theme {
+    background-color: #560250;
+    color: white;
+}
+    .dark-theme .navbar_layout, .dark-theme .footer_layout, table, tr, td, th {
+        background-color: #0f125985;
+        color: #fff !important;
+    }
+    .dark-theme .nav-buttons_layout {
+        background-color: #2872D1;
+    }
+        .dark-theme .nav-buttons_layout:hover, .nav-links_layout a:hover {
+            background-color: #001580;
+        }
+/*===============================================*/
+/*============= LAYOUT PAGE STYLE ===============*/
+/*===============================================*/
+.header_layout {
+    justify-items: center;
+    height: 261px;
+}
+.btnSun_layout {
+    top: 20px;
+    left: 34px;
+    width: 52px;
+    height: 52px;
+}
+.btnTranslat_layout {
+    top: 19px;
+    right: 29px;
+    width: 52px;
+    height: 52px;
+}
+.logo_layout {
+    top: 0;
+    width: 200px;
+    height: 200px;
+}
+.nav-links_layout {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+    .nav-links_layout a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 18px;
+        padding: 10px;
+    }
+        .nav-links_layout a:hover {
+            background-color: #001580;
+            border-radius: 90px;
+        }
+.navbar_layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #2872D1;
+    position: relative;
+}
+.nav-buttons_layout {
+    background-color: #0f125985;
+    color: white;
+    border-radius: 90px;
+    border: none;
+}
+    .nav-buttons_layout:hover {
+        background-color: #001580;
+    }
+.footer_layout {
+    background-color: #2872D1;
+    color: white;
+    padding: 40px 20px 20px 20px;
+}
+    .footer_layout a {
+        color: white;
+        text-decoration: none;
+    }
+        .footer_layout a:hover {
+            text-decoration: underline;
+        }
+.footer-bottom_layout {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: rgba(87, 132, 255, 1);
+}
+.logo-uni_layout {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 10px;
+}
+/*==================================================*/
+/*============== VISITOR PAGE STYLE ================*/
+/*==================================================*/
+.headline_visitor {
+    background-color: #ad6c9966;
+}
+.project-card_visitor {
+    width: 263px;
+    height: 262px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s;
+    background-color: #fff;
+    color: black;
+}
+    .project-card_visitor:hover {
+        transform: scale(1.05);
+        width: 100%;
+        height: 262px;
+    }
+.project-details_visitor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+    flex-direction: row;
+    padding: 15px;
+    z-index: 10;
+}
+.project-card_visitor:hover .project-details_visitor {
+    display: flex;
+}
+.project-info_visitor {
+    font-size: 14px;
+}
+.info-card_visitor {
+    background: linear-gradient(to bottom, #ffffff65, #e957f33b, #e957f371);
+    border-radius: 15px;
+    padding: 20px;
+    height: 300px;
+    color: white;
+    position: relative;
+}
+.info-card_visitor2 {
+    background: linear-gradient(to bottom, #ffffff65, #e957f33b, #e957f371);
+    border-radius: 15px;
+    padding: 20px;
+    height: 450px;
+    color: white;
+    position: relative;
+}
+.info-bubble_visitor {
+    background-color: #1976d2;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    max-width: fit-content;
+    margin: 20px auto;
+}
+.icon-box_visitor {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 40px;
+}
+.video-box_visitor {
+    background-color: #5e5e5e;
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+.card-custom_visitor {
+    background-color: #776f7500;
+    border: none;
+    box-shadow: none;
+}
+/*==================================================*/
+/*=============== Login PAGE STYLE =================*/
+/*==================================================*/
+.wrapper_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.container_login {
+    background: rgba(147,184,186, 0.1);
+    padding: 15px 25px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.503);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.form-group_login {
+    margin-bottom: 15px;
+    width: 100%;
+}
+    .form-group_login label {
+        display: block;
+        margin-bottom: 5px;
+        text-align: start;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .form-group_login input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+.btn_login {
+    background-color: #0f125985;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+    .btn_login:hover {
+        background-color: #0056b3;
+    }
+.a_login a {
+    padding: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.container_login form {
+    width: 300px
+}
+@media (max-width: 480px) {
+    .wrapper_login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 20px;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    .container_login {
+        background: rgba(147, 184, 186, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.503);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .form-group_login {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+        .form-group_login label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: start;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .form-group_login input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    .btn_login {
+        background-color: #0f125985;
+        color: white;
+        padding: 12px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+        .btn_login:hover {
+            background-color: #0056b3;
+        }
+    .a_login a {
+        padding: 25px;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .container_login form {
+        width: 100%;
+    }
+}
+/*===============================================*/
+/*=========== TeamLeader PAGE STYLE =============*/
+/*===============================================*/
+.project-card_leader {
+    width: 180px;
+    height: 250px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s;
+    background-color: #fff;
+    color: black;
+}
+    .project-card_leader:hover {
+        transform: scale(1.05);
+        width: 220px;
+    }
+        .project-card_leader:hover .project-details_visitor {
+            display: flex;
+        }
+.chat-btn {
+    position: fixed;
+    width: 60px;
+    top: 600px;
+    left: 50px;
+}
+    .chat-btn:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+/*=============================*/
+/*=============================*/
+/*=============================*/
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.hidden {
+    display: none;
+}

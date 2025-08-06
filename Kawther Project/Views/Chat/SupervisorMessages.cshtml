@@ -1,0 +1,119 @@
+﻿@model TeamLeaderViewModel
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Message</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+        .task-container {
+            width: 100%;
+        }
+
+        .new {
+            width: 100%;
+            background-color: #8165;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            border: solid black 2px;
+            border-radius: 100px;
+            margin: 20px;
+            box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+            .new:hover {
+                background-color: #0f125985;
+                transform: scale(1.05);
+                transition: 0.3s ease-in-out;
+                color: white;
+            }
+            
+        p {
+            margin: 0;
+            font-size: 15px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .header {
+            font-weight: bold;
+        }
+
+        table {
+            border: 5px solid black;
+        }
+
+        button:hover {
+            transform: scale(1.25);
+            transition: 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<div>
+
+    <div style="justify-items: center; " class="container wow fadeInUp" data-wow-delay="0.3s">
+
+        <div class="task-container">
+            <h1 style="text-align:center" data-translate="chat">
+                Chat
+            </h1>
+            <table>
+
+                <tbody>
+                    @foreach (var student in Model.Students)
+                    {
+                        <tr>
+                            <a href="@Url.Action("Index", "Chat", new { userType = "Student", id = student.Id, name = student.Name, projectId = Model.Project.Id })" style="display: block; justify-items:center">
+
+                                <div class="new" style="width: 100%; padding:0;display: flex; justify-content: center; align-items: center; gap: 20px;">
+
+                                    <h4 style="flex: 2; padding: 25px; text-align:center">@student.Name</h4>
+
+                                    <div style="background-color:antiquewhite; border-radius: 100px; width: 100px; height:100px; display: flex; justify-content: center; align-items: center; gap: 20px;">
+                                        <img src="@Model.Project.LogoUrl" alt="Project Logo" style="border-radius: 100px; width: 100px; height: 100px; object-fit: cover;" />
+
+                                    </div>
+                                </div>
+                            </a>
+                        </tr>
+
+                    }
+                    <tr>
+                        <a href="@Url.Action("Index", "Chat", new { userType = "Supervisor", id = Model.Project.Supervisor.Id, name = Model.Project.Supervisor.Name, projectId = Model.Project.Id })" style="display: block; justify-items:center">
+
+                            <div class="new" style="width: 100%; padding:0;display: flex; justify-content: center; align-items: center; gap: 20px;">
+
+                                <h4 style="flex: 2; padding: 25px; text-align:center">Dr. @Model.Project.Supervisor.Name</h4>
+
+                                <div style="background-color:antiquewhite; border-radius: 100px; width: 100px; height:100px; display: flex; justify-content: center; align-items: center; gap: 20px;">
+                                    <img src="@Model.Project.LogoUrl" alt="Project Logo" style="border-radius: 100px; width: 100px; height: 100px; object-fit: cover;" />
+
+                                </div>
+                            </div>
+                        </a>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+</html>

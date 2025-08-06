@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Student Tasks";
+}
+
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/TeamLeader/MyTaskStyle.css">
+</head>
+
+<body>
+
+    <div class="container wow fadeInUp" data-wow-delay="0.3s">
+        <div class="boxContainer">
+            <h1> @ViewBag.StudentName</h1>
+            <div style="  padding: 25px">
+                <table style="width: 600px;">
+                    <tbody style="  padding: 25px">
+                        <tr>
+                            <td class="linkData">
+                                <div class="divHeader">
+                                    <p class="header" data-translate="task8">Main task name</p>
+
+                                    <p class="header txtSubtask" data-translate="task15">Subtask Name</p>
+                                    <p class="header" data-translate="task9">Task status</p>
+
+                                </div>
+                            </td>
+                        </tr>
+                        @foreach (var task in Model)
+                        {
+                            <tr>
+                                <td class="linkData">
+                                    <div class="new">
+                                        <p>@task.MainTaskName</p>
+
+                                        <p class="txtSubtask">@task.SubTaskName</p>
+                                        <p>@task.TaskStatus</p>
+
+
+                                    </div>
+                                  
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

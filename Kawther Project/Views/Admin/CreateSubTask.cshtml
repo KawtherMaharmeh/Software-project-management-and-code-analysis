@@ -1,0 +1,33 @@
+﻿@model Kawther_Project.Models.SubTask
+@{
+    ViewData["Title"] = "Add Sub Task";
+    var mainTasks = ViewBag.MainTasks as List<Kawther_Project.Models.MainTask>;
+}
+<div class="container wow fadeInUp" data-wow-delay="0.3s">
+
+    <h2 data-translate="task0">Add Sub Task</h2>
+
+    <form asp-action="CreateSubTask" method="post">
+        <div class="form-group">
+            <label asp-for="Name" data-translate="name">Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="task1">Main Task</label>
+            <select asp-for="MainTaskId" class="form-control">
+                <option value="" data-translate="task2">-- Select Main Task --</option>
+                @foreach (var task in mainTasks)
+                {
+                    <option value="@task.Id">@task.Name</option>
+                }
+            </select>
+            <span asp-validation-for="MainTaskId" class="text-danger"></span>
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-primary" data-translate="save">Save</button>
+        <a asp-action="Index" class="btn btn-secondary" data-translate="back">Back</a>
+    </form>
+</div>

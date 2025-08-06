@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Add Task";
+    var students = ViewBag.Students as List<Student>;
+    var mainTasks = ViewBag.MainTaskTypes as List<MainTask>;
+}
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/TeamLeader/addTaskStyle.css">
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+    <style>
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="col-12 col-md-12 mb-4 mb-md-0 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="info-card_visitor2 text-center position-relative p-3">
+            <h6 data-translate="consciousness">consciousness</h6>
+
+            <div id="doctorMessagesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @for (int i = 0; i < Model.DoctorMessages.Count; i++)
+                    {
+                        var msg = Model.DoctorMessages[i];
+                        <div class="carousel-item @(i == 0 ? "active" : "")">
+                            <h6>@msg.DoctorName</h6>
+                            <div class="info-bubble_visitor overflow-auto" style="max-height: 150px;">
+
+                                <p>@msg.MessageText</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#doctorMessagesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" style="background-color: #000; border-radius: 50%;"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#doctorMessagesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" style="background-color: #000; border-radius: 50%;"></span>
+                </button>
+            </div>
+
+            <div class="icon-box_visitor mt-3">
+                <img src="~/images/icon.png" alt="icon" width="50">
+            </div>
+        </div>
+    </div>
+
+    <div class="container wow fadeInUp" data-wow-delay="0.3s">
+
+
+        <div class="add_task">
+            <h1 data-translate="message">Add Message</h1>
+            <div class="background-box">
+
+                <form id="addMessageForm" style="justify-items:center;" method="post" asp-controller="Supervisor" asp-action="AddConsciousness">
+                    <textarea class="consciousness_text" name="messageText" rows="8"></textarea>
+                    <p class="label_text">
+                        <button type="submit" class="btn_add" data-translate="message">Add Message</button>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Kawther_Project.Models.GraduationProject>
+<div class="container wow fadeInUp" data-wow-delay="0.3s" style="justify-items:center">
+
+    <h2 data-translate="GraduationProjects">Graduation Projects</h2>
+
+
+
+    <table class="table table-bordered mt-3 width-100">
+        <thead>
+            <tr>
+                <th data-translate="title">Title</th>
+                <th data-translate="year">Year</th>
+                <th data-translate="student">Students</th>
+                <th data-translate="supervisor">Supervisor</th>
+                <th data-translate="actions">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Year</td>
+                    <td>@item.Students</td>
+                    <td>@item.Supervisor</td>
+                    <td>
+                        <a asp-action="EditGraduationProject" asp-route-id="@item.Id" class="btn btn-primary btn-sm" data-translate="edit">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="CreateGraduationProject" class="btn btn-success" data-translate="project8">Create Graduation Project</a>
+
+</div>

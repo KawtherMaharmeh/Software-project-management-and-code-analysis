@@ -1,0 +1,52 @@
+﻿@model Kawther_Project.Models.GraduationProject
+
+@{
+    ViewData["Title"] = "Add New Graduation Project";
+}
+<div class="container" style="justify-items:center">
+
+    <h2 class="text-center wow fadeInUp" data-wow-delay="0.3s" data-translate="AddNewGraduationProject">@ViewData["Title"]</h2>
+
+
+
+
+    <form asp-action="CreateGraduationProject" method="post" style="padding:15px 25%" class="wow fadeInUp" data-wow-delay="0.4s">
+        <div class="form-group">
+            <label asp-for="Title" data-translate="title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Year" data-translate="year"></label>
+            <input asp-for="Year" class="form-control" />
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Students" data-translate="student"></label>
+            <input asp-for="Students" class="form-control" />
+            <span asp-validation-for="Students" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Supervisor" data-translate="supervisor"></label>
+            <input asp-for="Supervisor" class="form-control" />
+            <span asp-validation-for="Supervisor" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageFile" data-translate="view_logo"></label>
+            <input asp-for="ImageFile" type="file" class="form-control" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary" data-translate="project">Add Project</button>
+        <a asp-action="Index" class="btn btn-secondary" data-translate="cancel">Cancel</a>
+    </form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

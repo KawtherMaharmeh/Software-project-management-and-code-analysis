@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Create Account";
+}
+
+<div class="wrapper_login wow fadeInUp" data-wow-delay="0.3s">
+    <div class="container_login">
+        <h2 style="text-align: center; font-size:40px; font-weight:bold;" data-translate="account">Create Account</h2>
+        <form method="post">
+            <div class="form-group_login">
+                <label for="email" data-translate="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email" required />
+            </div>
+
+
+            <div class="form-group_login">
+                <label for="username" data-translate="user">User Name</label>
+                <input type="text" name="username" id="username" placeholder="Enter User Name" required />
+            </div>
+            <div class="form-group_login">
+                <label for="phoneNumber" data-translate="phone">Phone Number</label>
+                <input type="Number" name="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number" required />
+            </div>
+
+            <div class="form-group form-group_login">
+                <label for="userType" data-translate="user1">User Type</label>
+                <select name="userType" id="userType" required class="form-control">
+                    <option value="Admin" data-translate="admin">Admin</option>
+                    <option value="Student" data-translate="student1">Student</option>
+                    <option value="Supervisor" data-translate="supervisor">Supervisor</option>
+
+                </select>
+            </div>
+            <div class="form-group_login">
+                <label for="password" data-translate="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required />
+            </div>
+            @if (ViewBag.Error != null)
+            {
+                <div style="color: red;">@ViewBag.Error</div>
+            }
+            <br>
+            <button type="submit" class="btn_login" data-translate="account">Create Account</button>
+
+
+        </form>
+    </div>
+</div>
+
+<!-- Firebase App (core) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script>
+    // إعداد معلومات مشروع Firebase الخاص بك
+    const firebaseConfig = {
+        apiKey: "AIzaSyAYGMo__0U_yg8Alwk4C0prFehMA1v3k4g",
+        authDomain: "project-flow-216e0.firebaseapp.com",
+        projectId: "project-flow-216e0",
+        storageBucket: "project-flow-216e0.firebasestorage.app",
+        messagingSenderId: "768779291139",
+        appId: "1:768779291139:web:9f726f242bb1ab8fcb5c36",
+        measurementId: "G-X6BEB28LRG"
+    };
+
+    // تهيئة Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // منع الإرسال التقليدي
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const username = document.getElementById("username").value;
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        const userType = document.getElementById("userType").value;
+
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+
+                // إرسال رابط التحقق
+                user.sendEmailVerification()
+                    .then(() => {
+                        alert("تم إرسال رابط التحقق بنجاح إلى: " + email);
+
+                        // إرسال البيانات إلى السيرفر لحفظها في SQL
+                        fetch('/Admin/SaveUserToDatabase', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                email: email,
+                                username: username,
+                                phoneNumber: phoneNumber,
+                                password: password,
+                                userType: userType
+                            })
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    window.location.href = "/"; // مثلاً، توجيه لصفحة تسجيل الدخول
+                                } else {
+                                    alert("حدث خطأ أثناء حفظ البيانات في الخادم.");
+                                }
+                            });
+                    })
+                    .catch((error) => {
+                        console.error("فشل في إرسال التحقق:", error.message);
+                        alert("حدث خطأ في إرسال رابط التحقق: " + error.message);
+                    });
+            })
+            .catch((error) => {
+                console.error("خطأ في Firebase:", error.message);
+                alert("حدث خطأ: " + error.message);
+            });
+    });
+</script>

@@ -1,0 +1,225 @@
+﻿body {
+    background-color: #bb6ba5;
+    font-family: Arial, sans-serif;
+}
+
+.profile-pic-box {
+    background-color: #4a025b;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 45px;
+    font-family: 'Cursive', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+}
+
+.upload-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-update {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 150px;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(to bottom, #a5749b01, #5e3c6201);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+
+.chat-box2 {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.task-container {
+    background-color: #4D4D4D;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    justify-items: center;
+    flex: 2;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background-color: #333;
+    color: white;
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #666;
+}
+.main-task {
+    font-weight: bold;
+    color: white;
+}
+.sub-task {
+    color: white;
+}
+.status {
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 120px;
+}
+.success {
+    background-color: #FFA07A;
+    color: black;
+}
+.pending {
+    background-color: #FFD700;
+    color: black;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+.chat-container {
+    width: 80%;
+    max-width: 900px;
+    background: linear-gradient(to bottom, #a5749b, #5e3c62);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.logo {
+    width: 60px;
+}
+h1 {
+    font-size: 24px;
+    color: #000;
+}
+.chat-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: auto;
+    text-align: left;
+}
+.message {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.teacher {
+    background: #a05d1a;
+    color: white;
+    text-align: left;
+    position: relative;
+}
+.teacher::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 20px 25px 0;
+    border-color: transparent #a05d1a transparent transparent;
+}
+.character {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100px;
+}
+.student {
+    background: #0097a7;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+    position: relative;
+}
+    .student::after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        top: 0px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 25px 20px;
+        border-color: transparent transparent transparent #0097a7;
+    }
+.sender {
+    display: block;
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 2px;
+}
+.inputArea {
+    display: flex;
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.txtBoxWriteMessage {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    padding-left: 75px;
+    font-size: 16px;
+    outline: none;
+    text-align: left;
+    direction: ltr;
+}
+.studentSide {
+    justify-items: right;
+}
+.teacherSide {
+    justify-items: left;
+}

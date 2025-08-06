@@ -1,0 +1,58 @@
+﻿@model EditProjectViewModel
+<div class="d-flex align-items-center justify-content-center text-center ">
+
+    <div class="chat-container wow fadeInUp" data-wow-delay="0.3s">
+        <div class="chat-box2">
+            <section class="container my-5 ">
+                <h2 data-translate="project4">Edit Project</h2>
+
+                <form asp-controller="Admin" asp-action="EditProjectPost" method="post" enctype="multipart/form-data">
+                    @Html.ValidationSummary(true)
+
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="SupervisorId" />
+
+
+                    <div class="form-group">
+                        <label asp-for="Name" class="form-label" data-translate="name"></label>
+                        <input asp-for="Name" class="form-control" />
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        <label data-translate="select1">Select Team Leader</label>
+                        <select asp-for="TeamLeaderId" asp-items="Model.ProjectStudents" class="form-control">
+                            <option value="" data-translate="select2">-- Select Team Leader --</option>
+                        </select>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label asp-for="LogoUrl" class="form-label" data-translate="view_logo"></label>
+                        <input asp-for="LogoUrl" class="form-control" disabled />
+                    </div>
+
+                    <div class="mb-3">
+                        <label data-translate="logo">Upload New Logo</label>
+                        <input type="file" asp-for="LogoFile" class="form-control" />
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.LogoUrl))
+                    {
+                        <div class="mb-3">
+                            <label data-translate="logo1">Current Logo:</label><br />
+                            <img src="@Model.LogoUrl" alt="Logo" width="100" />
+                        </div>
+                    }
+
+                    <div class="mb-3">
+                        <label data-translate="student1">Select Students</label>
+                        <select asp-for="SelectedStudentIds" asp-items="Model.AllStudents" multiple class="form-control" size="10"></select>
+                    </div>
+
+                    <button type="submit" class="btn btn-success" data-translate="save1">Save Changes</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>

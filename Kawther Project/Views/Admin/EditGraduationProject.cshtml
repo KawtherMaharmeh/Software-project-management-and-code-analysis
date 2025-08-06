@@ -1,0 +1,39 @@
+﻿@model Kawther_Project.Models.GraduationProject
+<div class="wrapper_login wow fadeInUp" data-wow-delay="0.3s">
+    <div class="container_login">
+        <h2 data-translate="EditGraduationProject">Edit Graduation Project</h2>
+
+        <form asp-action="@ViewContext.RouteData.Values["action"].ToString()" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" />
+
+            <div>
+                <label data-translate="title">Title</label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <div>
+                <label data-translate="year">Year</label>
+                <input asp-for="Year" class="form-control" />
+            </div>
+            <div>
+                <label data-translate="student">Students</label>
+                <input asp-for="Students" class="form-control" />
+            </div>
+            <div>
+                <label data-translate="supervisor">Supervisor</label>
+                <input asp-for="Supervisor" class="form-control" />
+            </div>
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <div class="mb-2">
+                    <label data-translate="view_logo">Current Image:</label><br />
+                    <img src="@Model.ImagePath" width="150" />
+                </div>
+            }
+            <div>
+                <label data-translate="image1">Change Image</label>
+                <input asp-for="ImageFile" type="file" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary mt-3" data-translate="save">Save</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+﻿@{
+    ViewData["Title"] = "Add Task";
+    var students = ViewBag.Students as List<Student>;
+    var mainTasks = ViewBag.MainTaskTypes as List<MainTask>;
+}
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/TeamLeader/addTaskStyle.css">
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container wow fadeInUp" data-wow-delay="0.3s">
+        <div class="add_task">
+            <h1 data-translate="task">Add Task</h1>
+            <div class="background-box">
+                <p class="label_text" data-translate="studentname">Student Name</p>
+                <select id="studentSelect" class="select_style">
+                    <option value="" data-translate="SelectStudentName">Select Student Name</option>
+                    @foreach (var student in students)
+                    {
+                        <option value="@student.Id">@student.Name</option>
+                    }
+                </select>
+                <p class="label_text" data-translate="task11">Main Task Type</p>
+                <select id="mainTaskSelect" class="select_style">
+                    <option value="" data-translate="task12">Select Main Task Type</option>
+                    @foreach (var task in mainTasks)
+                    {
+                        <option value="@task.Id">@task.Name</option>
+                    }
+                </select>
+
+                <p class="label_text" data-translate="task13">Sub Task Type</p>
+                <select id="subTaskSelect" class="select_style">
+                    <option value="" data-translate="task14">Select Sub Task Type</option>
+                </select>
+                <p id="loadingText" class="txtLoad" data-translate="loading">Loading...</p>
+                <p class="label_text" data-translate="start">Start Time</p>
+                <input type="datetime-local" class="datetime" id="startTime">
+                <p class="label_text" data-translate="time">End Time</p>
+                <input type="datetime-local" class="datetime" id="endTime">
+                <p class="label_text" data-translate="note">Note</p>
+                <input type="text" class="note_text" id="note">
+                <p class="label_text">
+                    <button class="btn_add" data-translate="task">Add Task</button>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#mainTaskSelect").change(function () {
+                var mainTaskId = $(this).val();
+                var $subTaskSelect = $("#subTaskSelect");
+                var $loadingText = $("#loadingText");
+                $subTaskSelect.empty().append('<option value="">Select Sub Task</option>');
+
+                if (mainTaskId) {
+                    $loadingText.show();
+
+                    $.ajax({
+                        url: "/TeamLeader/GetSubTasks",
+                        type: "GET",
+                        data: { mainTaskId: mainTaskId },
+                        dataType: "json",
+                        success: function (data) {
+                            $loadingText.hide();
+                            if (data.length > 0) {
+                                $.each(data, function (index, item) {
+                                    $subTaskSelect.append('<option value="' + item.id + '">' + item.name + '</option>');
+                                });
+                            } else {
+                                $subTaskSelect.append('<option value="">No Data</option>');
+                            }
+                        },
+                        error: function () {
+                            $loadingText.hide();
+                            alert("An error occurred while loading subtasks.");
+                        }
+                    });
+                }
+            });
+
+            $(".btn_add").click(function () {
+                var studentId = $("#studentSelect").val();
+                var mainTaskId = $("#mainTaskSelect").val();
+                var subTaskId = $("#subTaskSelect").val();
+                var startTime = $("#startTime").val();
+                var endTime = $("#endTime").val();
+                var note = $("#note").val();
+
+                if (!studentId || !mainTaskId || !subTaskId || !startTime || !endTime) {
+                    alert("Please fill in all required fields.");
+                    return;
+                }
+
+                var taskData = {
+                    StudentId: parseInt(studentId),
+                    MainTaskId: parseInt(mainTaskId),
+                    SubTaskId: parseInt(subTaskId),
+                    StartTime: startTime,
+                    EndTime: endTime,
+                    Note: note
+                };
+
+                $.ajax({
+                    url: "/TeamLeader/AddTask",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(taskData),
+                    success: function (response) {
+                        alert(response.message);
+                        location.reload();
+                    },
+                    error: function () {
+                        alert("An error occurred while adding the task.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

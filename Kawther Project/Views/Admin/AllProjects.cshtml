@@ -1,0 +1,39 @@
+﻿@model TeamLeaderViewModel
+
+<section class="container my-5 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-9">
+            <h2 class="text-center fw-bold fs-2 mb-4" data-translate="project5">All Projects</h2>
+            <div class="row justify-content-center gx-4 gy-4">
+                @foreach (var project in Model.AllProjects)
+                {
+                    <div class="col-md-3 text-center row justify-content-center gx-4 gy-4 p-3">
+                        <div class="project-card_leader d-flex align-items-center justify-content-center flex-column">
+                            <h4>@project.Name</h4>
+
+                            <div class="project-details_visitor">
+                                <div class="col-12 d-flex flex-column align-items-center">
+                                    <h5 data-translate="student">Students:</h5>
+                                    @foreach (var student in project.Students)
+                                    {
+                                        <p>@student.Name</p>
+                                    }
+                                    <a asp-controller="Admin" asp-action="EditProject" asp-route-id="@project.Id" class="text-decoration-none">
+                                        <i class="bi bi-pencil-square fs-4 text-primary"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<a asp-controller="Admin" asp-action="CreateProject" class="text-decoration-none btn btn-success" data-translate="project">
+    Add New Project
+</a>

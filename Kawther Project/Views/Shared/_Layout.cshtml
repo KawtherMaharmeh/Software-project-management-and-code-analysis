@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kawther_Project</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Kawther_Project.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+      <link href="https://kayavisa.org/lib/animate/animate.min.css" rel="stylesheet">
+
+</head>
+<body class="layout">
+
+    <header class="position-relative w-100 header_layout wow fadeInDown" data-wow-delay="0.3s">
+        <a href="#">
+            <img src="/images/moon.png" alt="Theme" class="position-absolute btnSun_layout" id="themeBtn">
+        </a>
+
+        <a href="#">
+            <img src="/images/translate.png" alt="Translate" class="position-absolute btnTranslat_layout" id="translateBtn">
+        </a>
+
+
+        <img src="/images/logo.png" alt="Logo" class="position-absolute start-50 translate-middle-x"
+             style="top: 0; width: 200px; height: 200px;">
+
+        <nav class="navbar_layout navbar-expand d-flex justify-content-between align-items-center position-absolute w-100"
+             style="top: 191px; height: 70px;">
+            <ul class="nav-links_layout d-flex align-items-center gap-4 mb-0 list-unstyled ps-4">
+                <li class="nav-item d-flex align-items-center text-white fs-4 fw-bold">
+
+                    <a asp-controller="Account" asp-action="RedirectBasedOnRole" class="d-flex align-items-center text-white text-decoration-none" data-translate="home" >
+                        <i class="bi bi-house-fill"></i>
+                        Home
+                    </a>
+                    @if (Context.Session.GetString("UserEmail") != null)
+                    {
+                        var role = Context.Session.GetString("UserType");
+
+                        if (role == "TeamLeader")
+                        {
+                            <a asp-controller="TeamLeader" asp-action="MyTask" class="d-flex align-items-center text-white text-decoration-none" data-translate="task7">
+                                <i class="bi bi-people-fill"></i>
+                                My Tasks
+                            </a>
+                            <a asp-controller="TeamLeader" asp-action="FollowProjectProgress" class="d-flex align-items-center text-white text-decoration-none" data-translate="FlowProject">
+                                <i class="bi bi-people-fill"></i>
+                                Flow Project
+                            </a>
+                        }
+                        else if (role == "Student")
+                        {
+
+                            <a asp-controller="Student" asp-action="MyTask" class="d-flex align-items-center text-white text-decoration-none" data-translate="task7">
+                                <i class="bi bi-people-fill"></i>
+                                My Tasks
+                            </a>
+                        }
+                        else if (role == "Supervisor")
+                        {
+                            <a asp-controller="Supervisor" asp-action="consciousness" class="d-flex align-items-center text-white text-decoration-none" data-translate="Consciousness">
+                                <i class="bi bi-folder-fill"></i>
+                                Consciousness
+                            </a>
+                        }
+                    }
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3 pe-4">
+                
+                @if (Context.Session.GetString("UserEmail") != null)
+                {
+                    <a asp-controller="Student" asp-action="My_Profile">
+                        <button class="nav-buttons_layout rounded-btn px-4 py-2" data-translate="my_profile">حسابي</button>
+                    </a>
+                    <a asp-controller="Account" asp-action="Logout">
+                        <button class="nav-buttons_layout rounded-btn px-4 py-2" data-translate="logout">Log Out</button>
+                    </a>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login">
+                        <button class="nav-buttons_layout rounded-btn px-4 py-2" data-translate="login1">Log In</button>
+                    </a>
+                }
+                
+            </div>
+        </nav>
+    </header>
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer_layout text-white py-5 px-5 d-flex align-items-centerwow wow fadeInUp" data-wow-delay="0.3s">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mb-6 d-flex align-items-center">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-3 mb-3">
+
+                            <div class="logo_layout">
+                                <img src="/images/logoU.png" alt="" width="150px">
+                            </div>
+                        </div>
+                        <div class="col-md-9 mb-9">
+
+                            <p class="logo-uni_layout" data-translate="isra">
+                                ISRA UNIVERSITY
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-1 d-flex justify-content-center">
+                    <div style="width:1px; height:100%; background-color: rgb(255, 255, 255);"></div>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <h5 data-translate="address">Address</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li>
+                            <i class="fas fa-map-marker-alt" style="color: red;"></i><span data-translate="uniLocation">Amman - Airport Road</span>
+                        </li>
+                        <li class="mt-2">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13565.293122457431!2d35.9289864!3d31.7889383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae6abb0a054e828!2sIsra%20University!5e0!3m2!1sen!2sjo!4v1658297342145!5m2!1sen!2sjo"
+                                    width="100%" height="100%" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-1 d-flex justify-content-center">
+                    <div style="width:1px; height:100%; background-color: rgb(255, 255, 255);"></div>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <h5 data-translate="contact">Contact</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="iu.edu.jo" data-translate="website">University Web Site</a></li>
+                        <li>
+                            <div class="d-flex" style="padding: 25px 0;">
+                                <a target="_blank" href="https://www.instagram.com/alisrauni?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="padding: 15px;">
+                                    <img src="/images/instagram.png" alt="" style="width: 40px;">
+                                </a>
+                                <a target="_blank" href="https://web.facebook.com/alisrauni" style="padding: 15px;">
+                                    <img src="/images/facebook.png" alt="" style="width: 40px;">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/main.js" asp-append-version="true"></script>
+
+
+</body>
+</html>

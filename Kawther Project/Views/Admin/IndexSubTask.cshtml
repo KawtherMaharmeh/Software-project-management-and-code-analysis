@@ -1,0 +1,49 @@
+﻿@model List<Kawther_Project.Models.SubTask>
+
+<div class="container wow fadeInUp" data-wow-delay="0.3s">
+
+    <h2 data-translate="SubTasks">Sub Tasks</h2>
+
+    <a asp-action="CreateSubTask" class="btn btn-success" data-translate="task0">Add Sub Task</a>
+    <form asp-action="IndexSubTask" method="get" class="mb-3">
+    <div class="form-group">
+            <label for="mainTaskId" data-translate="FilterMainTask">Filter by Main Task</label>
+        <select id="mainTaskId" name="mainTaskId" class="form-control" onchange="this.form.submit()">
+                <option value="" data-translate="all">-- All --</option>
+                @foreach (var task in (SelectList)ViewBag.MainTasks)
+                {
+                    var selected = Context.Request.Query["mainTaskId"] == task.Value ? "selected" : "";
+                    <option value="@task.Value" selected="@selected">@task.Text</option>
+                }
+
+        </select>
+    </div>
+</form>
+
+    <div style="padding:25px">
+        <table class="table table-bordered mt-3 width-100">
+            <thead>
+                <tr>
+                    <th data-translate="no">No.</th>
+                    <th data-translate="name">Name</th>
+                    <th data-translate="task1">Main Task</th>
+                    <th data-translate="actions">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var sub in Model)
+                {
+                    <tr>
+                        <td>@sub.Id</td>
+                        <td>@sub.Name</td>
+                        <td>@sub.MainTask?.Name</td>
+                        <td>
+                            <a asp-action="EditSubTask" asp-route-id="@sub.Id" class="btn btn-primary btn-sm" data-translate="edit">Edit</a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

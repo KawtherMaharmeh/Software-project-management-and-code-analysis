@@ -1,0 +1,180 @@
+﻿      @model List<Message>
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+    <style>
+
+        .chat-container {
+            width: 100%;
+            background: linear-gradient(to bottom, #a5749b01, #5e3c6201);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+
+        .logo {
+            width: 60px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #000;
+        }
+
+        .chat-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            height: 400px;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        .message {
+            width: 50%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .teacher {
+            background: #a05d1a;
+            color: white;
+            text-align: left;
+            position: relative;
+            margin-right: auto;
+        }
+
+            .teacher::after {
+                content: "";
+                position: absolute;
+                left: -10px;
+                top: 0px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 20px 25px 0;
+                border-color: transparent #a05d1a transparent transparent;
+            }
+
+        .student {
+            background: #0097a7;
+            color: white;
+            text-align: right;
+            margin-left: auto;
+            position: relative;
+        }
+
+            .student::after {
+                content: "";
+                position: absolute;
+                right: -10px;
+                top: 0px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 0 25px 20px;
+                border-color: transparent transparent transparent #0097a7;
+            }
+
+        .sender {
+            display: block;
+            font-size: 12px;
+            color: #000;
+            margin-bottom: 2px;
+        }
+
+        .input-area {
+            display: flex;
+            margin-top: 10px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            padding-left: 75px;
+            font-size: 16px;
+            outline: none;
+            text-align: left;
+            direction: ltr;
+            /
+        }
+
+
+        button {
+            background: none;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+            button img {
+                width: 24px;
+            }
+
+        .character {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right:10px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="justify-items:center">
+        <div class="chat-container wow fadeInUp" data-wow-delay="0.3s">
+
+            <div class="chat-box">
+                @foreach (var message in Model)
+                {
+                    if (message.Sender == ViewBag.UserName)
+                    {
+                        <div class="message student">
+                            <strong data-translate="me">Me</strong>
+                            <span class="sender">@message.Text</span>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="message teacher">
+                            <strong>@message.Sender</strong>
+                            <span class="sender">@message.Text</span>
+                        </div>
+                    }
+                }
+            </div>
+
+            <form asp-action="Send" method="post" class="input-area">
+                <input type="hidden" name="receiverStudentId" value="@ViewBag.StudentId" />
+                <input type="hidden" name="receiverSupervisorId" value="@ViewBag.SupervisorId" />
+                <input type="hidden" name="projectId" value="@ViewBag.ProjectId" />
+                <input type="hidden" name="userType" value="@(ViewBag.StudentName != null ? "Student" : "Supervisor")" />
+                <input type="hidden" name="name" value="@ViewBag.StudentName" />
+
+                <input type="text" name="text" placeholder="Write a message..." />
+                <button type="submit">
+                    <img src="~/images/paper-plane.png" alt="Send">
+                </button>
+            </form>
+
+            <img src="~/images/character.png" alt="Character" class="character">
+        </div>
+
+    </div>
+</body>
+
+</html>

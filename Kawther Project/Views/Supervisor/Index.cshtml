@@ -1,0 +1,103 @@
+﻿@model TeamLeaderViewModel
+
+<section class="text-white py-5 px-3 px-md-5 headline_visitor wow fadeInUp" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <div class="card h-100 text-center border-0 card-custom_visitor">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <img src="~/images/splash2.gif" alt="">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <p class="fs-5 fw-bold text-white" data-translate="text_content1">
+                    Welcome to Project Flow System, the ideal platform designed to help students and professors
+                    organize and track academic projects effectively. This system provides an integrated environment for
+                    managing
+                    study groups, tracking project progress, uploading files, and exchanging comments and feedback between
+                    professors
+                    and students.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-9">
+            <h2 class="text-center fw-bold fs-2 mb-4" data-translate="project9">Projects I am responsible for</h2>
+            <a asp-controller="Supervisor" asp-action="AllProjects" class="btn btn-primary mb-3" data-translate="veiw">View All</a>
+            <div class="row justify-content-center gx-4 gy-4">
+                @foreach (var project in Model.AllProjects)
+                {
+                    <div class="col-md-3 text-center row justify-content-center gx-4 gy-4 p-3">
+                        <div class="project-card_leader d-flex align-items-center justify-content-center flex-column">
+                            <h4>@project.Name</h4>
+
+                            <div class="project-details_visitor">
+                                <div class="col-12 d-flex flex-column align-items-center">
+                                    <h5 data-translate="student">Students:</h5>
+                                    @foreach (var student in project.Students)
+                                    {
+                                        <p>@student.Name</p>
+                                    }
+                                    <a asp-controller="Supervisor" asp-action="DetailsProject" asp-route-projectId="@project.Id" class="btn btn-outline-info mt-2" style="width: 150px" data-translate="details">
+                                        عرض التفاصيل
+                                    </a>
+
+                                    <a asp-controller="Chat" asp-action="SupervisorMessages" asp-route-projectId="@project.Id" class="btn btn-outline-info mt-2" style="width: 150px" data-translate="chat">
+                                        Chat
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="px-5 mb-5 wow fadeInUp" data-wow-delay="0.3s">
+    <h2 class="text-center fw-bold fs-2 mb-4" data-translate="previous">Previous graduation projects</h2>
+    <div class="row justify-content-center gx-4 gy-4">
+        @foreach (var project in Model.GraduationProjects)
+        {
+            <div class="col-md-4 text-center row justify-content-center gx-4 gy-4 p-3">
+                <div class="project-card_visitor d-flex align-items-center justify-content-center flex-column">
+                    <img src="@project.ImagePath" class="img-fluid mb-2" alt="Project Logo" style="width: 80px;">
+                    <h4>@project.Title</h4>
+
+                    <div class="project-details_visitor">
+                        <div class="col-5 d-flex flex-column align-items-start">
+                            <img src="@project.ImagePath" class="img-fluid mb-2" alt="Project Logo" style="width: 80px;">
+                            <h4>@project.Title</h4>
+                        </div>
+
+                        <div class="col-7 project-info_visitor">
+                            <p><strong data-translate="year">Year:</strong> @project.Year</p>
+                            <p><strong data-translate="students">Student:</strong></p>
+                            <ul class="mb-1 ps-3">
+                                @foreach (var student in project.Students.Split(","))
+                                {
+                                    <li>@student</li>
+                                }
+                            </ul>
+                            <p><strong data-translate="supervisor">Supervisor:</strong> @project.Supervisor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</section>
+
