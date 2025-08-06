@@ -395,7 +395,7 @@ namespace Kawther_Project.Controllers
 
             using var httpClient = new HttpClient();
 
-            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "");
+            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "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");
 
             var data = new
             {
