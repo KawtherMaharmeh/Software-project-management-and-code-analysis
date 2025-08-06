@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Project\\kawther project\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{51C485E4-50C3-4F59-9EBC-A3C093CC3EE5}|Kawther Project\\Kawther Project.csproj|c:\\users\\user\\desktop\\project\\kawther project\\kawther project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51C485E4-50C3-4F59-9EBC-A3C093CC3EE5}|Kawther Project\\Kawther Project.csproj|solutionrelative:kawther project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\Program.cs",
+              "RelativeDocumentMoniker": "Kawther Project\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\Program.cs",
+              "RelativeToolTip": "Kawther Project\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T18:44:37.611Z",
+              "EditorCaption": ""
             }
           ]
         }
