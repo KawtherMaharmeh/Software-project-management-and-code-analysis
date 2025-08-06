@@ -1,0 +1,481 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Kawther Project.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Kawther Project.l0a2ednr95.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\css\\Doctor\\DetailsProjectStyle.css",
+      "PackagePath": "staticwebassets\\css\\Doctor\\DetailsProjectStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\css\\TeamLeader\\FollowProjectProgressStyle.css",
+      "PackagePath": "staticwebassets\\css\\TeamLeader\\FollowProjectProgressStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\css\\TeamLeader\\MyTaskStyle.css",
+      "PackagePath": "staticwebassets\\css\\TeamLeader\\MyTaskStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\css\\TeamLeader\\TeamLeaderStyle.css",
+      "PackagePath": "staticwebassets\\css\\TeamLeader\\TeamLeaderStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\css\\TeamLeader\\addTaskStyle.css",
+      "PackagePath": "staticwebassets\\css\\TeamLeader\\addTaskStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\Technology.jpg",
+      "PackagePath": "staticwebassets\\images\\Technology.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\Technology.png",
+      "PackagePath": "staticwebassets\\images\\Technology.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\character.png",
+      "PackagePath": "staticwebassets\\images\\character.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\facebook.png",
+      "PackagePath": "staticwebassets\\images\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\fi_72439.png",
+      "PackagePath": "staticwebassets\\images\\fi_72439.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\icon.png",
+      "PackagePath": "staticwebassets\\images\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\instagram.png",
+      "PackagePath": "staticwebassets\\images\\instagram.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\lllo.png",
+      "PackagePath": "staticwebassets\\images\\lllo.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\logoU.png",
+      "PackagePath": "staticwebassets\\images\\logoU.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\moon.png",
+      "PackagePath": "staticwebassets\\images\\moon.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\paper-plane.png",
+      "PackagePath": "staticwebassets\\images\\paper-plane.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\splash2.gif",
+      "PackagePath": "staticwebassets\\images\\splash2.gif"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\sun.png",
+      "PackagePath": "staticwebassets\\images\\sun.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\images\\translate.png",
+      "PackagePath": "staticwebassets\\images\\translate.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\js\\wow.js",
+      "PackagePath": "staticwebassets\\js\\wow.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\images\\character.png",
+      "PackagePath": "staticwebassets\\lib\\images\\character.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\images\\chat.png",
+      "PackagePath": "staticwebassets\\lib\\images\\chat.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\images\\file.png",
+      "PackagePath": "staticwebassets\\lib\\images\\file.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\images\\image-removebg-preview.png",
+      "PackagePath": "staticwebassets\\lib\\images\\image-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\images\\lllo.png",
+      "PackagePath": "staticwebassets\\lib\\images\\lllo.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\images\\paper-plane.png",
+      "PackagePath": "staticwebassets\\lib\\images\\paper-plane.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\images\\person.png",
+      "PackagePath": "staticwebassets\\lib\\images\\person.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\05a9cfef-d4d1-40c6-8046-b4a151619746.jpg",
+      "PackagePath": "staticwebassets\\uploads\\05a9cfef-d4d1-40c6-8046-b4a151619746.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\0dc68a43-e491-4c3a-a573-9d0101d583d0_Screenshot 2025-04-17 143457.png",
+      "PackagePath": "staticwebassets\\uploads\\0dc68a43-e491-4c3a-a573-9d0101d583d0_Screenshot 2025-04-17 143457.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\2534d33e-edc3-48d0-86aa-d456574b7c31.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2534d33e-edc3-48d0-86aa-d456574b7c31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\57590c8c-df5d-4672-941a-5e137ce4c3f6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\57590c8c-df5d-4672-941a-5e137ce4c3f6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\5a12b952-8166-48e5-bd05-14d9bdcb9495.png",
+      "PackagePath": "staticwebassets\\uploads\\5a12b952-8166-48e5-bd05-14d9bdcb9495.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\5e635cb4-e7ed-4680-bc38-6938de36e706.png",
+      "PackagePath": "staticwebassets\\uploads\\5e635cb4-e7ed-4680-bc38-6938de36e706.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\615b6192-6412-4f7a-8963-c2d3fcda7a84.png",
+      "PackagePath": "staticwebassets\\uploads\\615b6192-6412-4f7a-8963-c2d3fcda7a84.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\7321befe-108e-42b5-b41f-c3279fccd097.png",
+      "PackagePath": "staticwebassets\\uploads\\7321befe-108e-42b5-b41f-c3279fccd097.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\7889d6cb-cdc7-449d-a6ef-d55f7a4a185a_Screenshot 2025-04-17 143457.png",
+      "PackagePath": "staticwebassets\\uploads\\7889d6cb-cdc7-449d-a6ef-d55f7a4a185a_Screenshot 2025-04-17 143457.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\888f9f8b-8276-477c-9cdf-c48d2c746d0d.png",
+      "PackagePath": "staticwebassets\\uploads\\888f9f8b-8276-477c-9cdf-c48d2c746d0d.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\93993f9f-bb70-4648-a024-60f35d7527b6.png",
+      "PackagePath": "staticwebassets\\uploads\\93993f9f-bb70-4648-a024-60f35d7527b6.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\95b38592-cc40-4b0a-812e-dd4c9afb1cee.png",
+      "PackagePath": "staticwebassets\\uploads\\95b38592-cc40-4b0a-812e-dd4c9afb1cee.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\a18d342f-345c-468c-858b-6609420ad15f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a18d342f-345c-468c-858b-6609420ad15f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\a74d3d9b-a3c1-4cc7-a194-272cc72e70a0.png",
+      "PackagePath": "staticwebassets\\uploads\\a74d3d9b-a3c1-4cc7-a194-272cc72e70a0.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\b795027e-9c4b-4ac8-8a9a-4c9d9641a38f.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\b795027e-9c4b-4ac8-8a9a-4c9d9641a38f.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\ebdd378d-699c-4e94-8927-f0d4e8e3b576.png",
+      "PackagePath": "staticwebassets\\uploads\\ebdd378d-699c-4e94-8927-f0d4e8e3b576.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\f5e8a444-8638-4fc9-9235-2845683f0ef7.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\f5e8a444-8638-4fc9-9235-2845683f0ef7.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\uploads\\graduation\\logo1.png",
+      "PackagePath": "staticwebassets\\uploads\\graduation\\logo1.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project\\kawther project\\Kawther Project\\wwwroot\\videos\\جامعة الإسراء.mp4",
+      "PackagePath": "staticwebassets\\videos\\جامعة الإسراء.mp4"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Kawther Project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Kawther Project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Kawther Project.props",
+      "PackagePath": "build\\Kawther Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Kawther Project.props",
+      "PackagePath": "buildMultiTargeting\\Kawther Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Kawther Project.props",
+      "PackagePath": "buildTransitive\\Kawther Project.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
